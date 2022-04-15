@@ -6,6 +6,13 @@ collections:
     label: 'Articles'
     label_singular: 'Article'
     create: true
+    extension: md
+    format: yaml-frontmatter
+    path: '{{slug}}/index'
+    slug: '{{slug}}'
+    folder: 'urara'
+    media_folder: ''
+    public_folder: ''
     filter:
       field: layout
       value: article
@@ -20,6 +27,13 @@ collections:
     label: 'Notes'
     label_singular: 'Note'
     create: true
+    extension: md
+    format: yaml-frontmatter
+    path: '{{slug}}/index'
+    slug: '{{slug}}'
+    folder: 'urara'
+    media_folder: ''
+    public_folder: ''
     filter:
       field: layout
       value: note
@@ -27,11 +41,3 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "note"}
       - {label: "Publish Date", name: "published", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-extension: md
-format: yaml-frontmatter
-path: '{{slug}}/index'
-slug: '{{slug}}'
-folder: 'urara'
-media_folder: ''
-public_folder: ''
