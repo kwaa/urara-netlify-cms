@@ -5,6 +5,7 @@ collections:
   - name: 'article'
     label: 'Articles'
     label_singular: 'Article'
+    create: true
     filter:
       field: layout
       value: article
@@ -18,6 +19,7 @@ collections:
   - name: 'note'
     label: 'Notes'
     label_singular: 'Note'
+    create: true
     filter:
       field: layout
       value: note
