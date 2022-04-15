@@ -31,8 +31,8 @@ collections:
     create: true
     extension: md
     format: yaml-frontmatter
-    path: '{{slug}}/index'
-    slug: '{{slug}}'
+    path: '{{year}}/{{month}}/{{day}}-{{hour}}_{{minute}}/index'
+    slug: '{{year}}/{{month}}/{{day}}-{{hour}}_{{minute}}'
     folder: 'urara'
     media_folder: ''
     public_folder: ''
