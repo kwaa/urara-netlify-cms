@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+collections:
+  - name: 'article'
+    label: 'article'
+    folder: 'urara'
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    filter:
+      field: layout
+      value: article
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "published", widget: "datetime"}
+      - {label: "Featured Image", name: "cover", widget: "image"}
+      - {label: "Description", name: "descr", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+media_folder: "urara/uploads"
+public_folder: "/uploads"
